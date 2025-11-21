@@ -146,7 +146,7 @@ Download and install Docker Desktop from docker.com
 
 ```bash
 # Pull image from registry
-docker pull nginx:latest
+docker pull nginx:1.25
 docker pull ubuntu:20.04
 
 # List local images
@@ -158,7 +158,7 @@ docker build -t myapp:1.0 .
 docker build -t myapp:latest -f Dockerfile.prod .
 
 # Remove image
-docker rmi nginx:latest
+docker rmi nginx:1.25
 docker image rm myapp:1.0
 
 # Tag image
@@ -168,10 +168,10 @@ docker tag myapp:1.0 myusername/myapp:1.0
 docker push myusername/myapp:1.0
 
 # Image history
-docker history nginx:latest
+docker history nginx:1.25
 
 # Inspect image
-docker inspect nginx:latest
+docker inspect nginx:1.25
 ```
 
 ### Containers
@@ -738,7 +738,7 @@ docker run --cap-drop ALL --cap-add NET_BIND_SERVICE nginx
 docker run --user 1000:1000 nginx
 
 # Security scanning
-docker scan nginx:latest
+docker scan nginx:1.25
 ```
 
 ## Resources
