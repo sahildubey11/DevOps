@@ -1,0 +1,74 @@
+Software Development Lifecycle(SDLC)
+
+The Software Development Lifecycle (SDLC) is a structured process followed by software development teams to plan, build, test,
+deploy, and maintain software in an organized and systematic way. Instead of jumping directly into coding, SDLC follows clearly
+defined phases to ensure the final software meets user needs, performs reliably, and can be improved or maintained efficiently.
+
+Stages of the Software Development Life Cycle
+
+Stage 1: Planning and Requirement Analysis
+Traditional SDLC
+
+Teams identify the problem, define goals, and gather detailed requirements from stakeholders. This stage involves project managers, clients, and senior developers.
+DevOps Integration
+
+DevOps promotes early collaboration between developers, operations, and business teams.
+Tools like Jira or Trello help in tracking requirements.
+Emphasis is placed on shared responsibility and clear communication across roles.
+
+Stage 2: Defining Requirements
+Traditional SDLC
+
+A detailed Software Requirement Specification (SRS) document is created to define what needs to be built.
+DevOps Integration
+
+DevOps encourages version-controlled documentation.
+Requirements are often refined through iterative feedback loops during development.
+Collaboration between Dev, QA, and Ops teams ensures realistic and testable requirements.
+
+
+Stage 3: Designing Architecture
+Traditional SDLC
+
+System and software design documents are created based on requirements. This includes both high-level (HLD) and low-level design (LLD).
+DevOps Integration
+
+DevOps teams choose architectures that support automation, scaling, and containerization.
+Tools like Lucidchart, Draw.io, or PlantUML may be used collaboratively.
+Design decisions also consider CI/CD pipelines, monitoring, and rollback strategies from the start.
+
+Stage 4: Developing Product
+Traditional SDLC
+
+Developers start coding based on design documents. The code is usually stored in repositories and followed by peer review.
+DevOps Integration
+
+Code is committed to version control systems like Git, hosted on platforms like GitHub or GitLab.
+Automated builds and testing are triggered using tools like Jenkins, GitHub Actions, or GitLab CI.
+DevOps encourages small, frequent commits and feature branching to avoid integration conflicts.
+
+
+Stage 5: Product Testing and Integration
+Traditional SDLC
+
+QA teams manually or automatically test the product based on defined test cases.
+DevOps Integration
+
+DevOps enables Continuous Testing using tools like Selenium, JUnit, TestNG, and Postman.
+Automated test suites are integrated into the CI pipeline.
+Testing is performed parallel to development (Shift Left Testing), ensuring early bug detection.
+
+
+Stage 6: Deployment and Maintenance of Products
+Traditional SDLC
+Manual Release Process: Deployment is typically done manually by system administrators. This process is slower and prone to human error.
+Fixed Schedules: Releases are planned in large batches with long intervals (monthly or quarterly), making it harder to fix issues quickly.
+Limited Monitoring: Monitoring and feedback collection are often delayed or reactive, which can affect performance and user satisfaction.
+Slow Maintenance Cycle: Any required updates, patches, or bug fixes take time due to manual procedures and lack of automation.
+DevOps Integration
+Automated Deployment: Uses tools like Jenkins, GitHub Actions, or Azure Pipelines to automate build, test, and deployment processes—ensuring faster and safer releases.
+Continuous Delivery: Code changes can be deployed frequently (even daily) thanks to CI/CD pipelines.
+Containerization: Technologies like Docker and Kubernetes allow consistent deployments across development, testing, and production environments.
+Proactive Monitoring: Tools like Prometheus and Grafana are used to monitor system health in real time and trigger alerts on failures or performance dips.
+Instant Feedback and Updates: Real-time user feedback helps roll out improvements faster. DevOps supports continuous updates without affecting the live system.
+Rollback and Resilience: Supports reliable rollback mechanisms using blue-green or canary deployments, minimizing user impact during failures.
