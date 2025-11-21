@@ -1,0 +1,56 @@
+DevOps is a combination of two words: "Development" and "Operations."
+
+The main idea of DevOps is to improve the software delivery process. We achieve this by software release automation, continuous monitoring/logging and testing. The goals of DevOps are:
+
+Faster and continuous software releases.
+Reduces manual errors through automation.
+Built-in Monitoring, detect failures or issues during delivery or in production.
+Automate testing throughout the software delivery process.
+
+
+
+
+
+
+Stages of DevOps are:
+
+Build Stage
+1. Developers write and organize code, using version control tools like Git to track changes.
+
+2. The system automatically compiles and packages the code into a deployable format.
+
+3. Dependencies (external libraries and tools) are included to ensure smooth operation.
+
+4. Common Tools: Git, Jenkins, GitLab CI/CD, Gradle, Maven.
+
+Test Stage
+1. The software undergoes thorough testing to catch bugs and security risks before release.
+
+2. Different testing methods include:
+
+Unit Testing: Checks individual pieces of code.
+Integration Testing: Ensures different parts of the system work together.
+Performance Testing: Measures speed and scalability.
+Security Testing: Identifies potential vulnerabilities.
+3. Automated tests help ensure the software is stable before moving forward.
+
+4. Common Tools: Selenium, JUnit, TestNG, SonarQube.
+
+Release Stage
+1. The software is deployed in a staging environment to simulate real-world conditions.
+
+2. If everything checks out, the software is rolled out to production using deployment strategies like:
+
+Blue-Green Deployment: Two identical environments switch traffic for a seamless update.
+Canary Deployment: A small percentage of users get the new version first, ensuring safety.
+Rolling Updates: The update is gradually pushed out to all users.
+3. Common Tools: Docker, Kubernetes, Ansible, Helm, ArgoCD.
+
+Continuous Feedback Loop
+A key aspect of DevOps is learning from real-world performance and using that feedback to improve future releases.
+
+Monitoring & Logging: Track system performance and detect errors.
+User Feedback: Gather insights from customers to enhance features.
+Incident Response: Alert systems notify teams of failures for quick fixes.
+Process Improvement: Teams analyze past releases to optimize automation and workflow.
+Common Tools: Prometheus, Grafana, ELK Stack, Datadog, New Relic.
