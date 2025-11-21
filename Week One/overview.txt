@@ -1,0 +1,42 @@
+Day 1 – DevOps Fundamentals
+Get started with the basics of DevOps and what it means to work in this field.
+
+What is DevOps and why it matters
+Roles and responsibilities of a DevOps Engineer
+Required skills and career opportunities in DevOps
+Basic prerequisites to get started
+Day 2 – DevOps Role & Development Methodologies
+Understand where DevOps fits in the software development process.
+
+What is SDLC (Software Development Life Cycle)
+Traditional vs modern development workflows
+Where DevOps adds value in the lifecycle
+Day 3 – DevOps Lifecycle
+Explore the full DevOps process from planning to monitoring.
+
+Key stages: Plan, Develop, Build, Test, Release, Deploy, Operate, Monitor
+Tools commonly used at each stage
+The role of automation in the lifecycle
+Day 4 – Linux Fundamentals
+Learn about the operating system most commonly used in DevOps environments.
+
+What is Linux and why it’s used in DevOps
+Understanding the Linux directory structure
+Basic Linux commands used in real-world DevOps tasks
+Day 5 – Linux Admin Essentials
+Go deeper into Linux system administration.
+
+Managing users and groups in Linux
+Understanding package managers (apt, yum)
+Basics of disk partitioning and setup in Linux
+Day 6 – Scripting for DevOps
+Start automating tasks using scripting languages.
+
+Introduction to Shell scripting
+Scripting in Python
+Scripting in Bash
+Day 7 – Automating Tasks with Shell Scripts and Crontab
+Learn automating with projects:
+
+How to See CPU Resource Usage Using Python Script
+Automating Jira Ticket Creation Using Python and Jira REST API.
