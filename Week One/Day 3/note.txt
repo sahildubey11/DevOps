@@ -1,0 +1,35 @@
+Linux is based on the UNIX operating system.
+
+Linux is free and open-source, accessible to everyone.
+This promotes global collaboration and innovation.
+Linux offers efficient performance and strong security.
+It works well across many devices and industries.
+
+
+What is a “distribution?”
+Linux distribution is an operating system that is made up of a collection of software based on Linux kernel or you
+can say distribution contains the Linux kernel and supporting libraries and software. And you can get Linux-based
+operating system by downloading one of the Linux distributions and these distributions are available for different
+types of devices like embedded devices, personal computers, etc.
+
+
+Installing Software on Linux
+On Linux, installing software is simple.
+
+For Debian-based systems (like Ubuntu), use package managers like apt
+sudo apt install package_name
+For Fedora, use dnf
+sudo dnf install package_name
+
+
+Linux Commands
+Basic tools for utilizing the command line interface (CLI) to communicate with the operating system are Linux commands. Commonly used commands like:
+
+ls – Lists contents of directories
+cd – Changes the current directory
+pwd – Displays the current directory path
+cp, mv, rm – Used to copy, move, and delete files respectively
+free – Shows memory usage
+df – Checks disk space usage
+top – Monitors running processes
+netstat, ifconfig, ping – Help monitor and troubleshoot network connections
