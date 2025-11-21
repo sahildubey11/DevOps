@@ -1,0 +1,73 @@
+Prerequisites Before Learning DevOps
+Here are some important prerequisites you should know before starting your DevOps journey:
+
+1. Operating Systems & Networking
+DevOps depends a lot on operating systems, especially Linux. As a DevOps engineer, you’ll often work on setting up servers, managing system processes, and fixing system issues. That’s why learning Linux commands, file systems, and shell scripting is very important. Knowing a bit about Windows systems can also help in some cases.
+
+Networking is just as important. You should understand the basics like IP addresses, DNS, HTTP/HTTPS, and tools like firewalls, load balancers, and VPNs. These skills help systems communicate and keep everything running safely and smoothly.
+
+What to learn:
+
+Common Linux commands like ls, cd, mkdir, top, ps
+Basics of the file system and shell scripting
+How to manage system users and processes
+Also learn some networking basics:
+
+What is an IP address, DNS, HTTP/HTTPS?
+What are firewalls, VPNs, and load balancers?
+Tip: Use tools like VirtualBox or online terminals to practice in real Linux environments.
+
+2. Version Control with Git (VCS)
+Version control is a must-have in DevOps. It helps track code changes and makes teamwork easy. Tools like Git let developers work on the same project without getting in each other’s way.
+
+To use Git well, you should know basic commands like clone, commit, and merge. Platforms like GitHub and GitLab also make it easier to collaborate and connect with CI/CD pipelines for automatic deployments.
+
+As you improve, you should also learn more advanced Git topics like branching and fixing merge conflicts. Using Git workflows like Git Flow or Trunk-Based Development helps teams manage large projects smoothly and avoid errors.
+
+What to learn:
+
+Master Git commands: cloning, branching, merging, and resolving conflicts.
+Learn Git workflows, such as Git Flow and Trunk-Based Development.
+Explore Git platforms like GitHub, GitLab, and Bitbucket for collaboration.
+Tip: Try making a small project and share it on GitHub to get hands-on practice.
+
+3. Programming & Scripting Skills
+In DevOps, knowing how to code and write scripts is very important. It helps you automate tasks and connect different tools. Python is a great language to start with because it’s easy to learn and has many built-in tools. It’s often used for things like checking logs or setting up servers. Go is another good language that’s fast and reliable for building DevOps tools.
+
+Scripting is just as important. Using Bash (for Linux) or PowerShell (for Windows), you can write scripts to install software, run system commands, and manage servers.
+
+When you know both programming and scripting, you can automate repetitive work, save time, and make your DevOps projects run more smoothly.
+
+What to learn:
+
+Start with Python: easy to read and very useful
+Learn Bash or PowerShell for writing scripts
+Understand basics like loops, if-else conditions, file handling
+Tip: Start by automating a boring task: like renaming files or creating folders.
+
+4. Linux Fundamentals
+Linux is important for DevOps, as most tools like Docker, Kubernetes, Jenkins, and cloud services run on Linux-based systems. Learning Linux gives you full control over system behavior, automation, and deployments.
+
+5. Cloud Computing Basics
+Cloud computing is a big part of DevOps today. It has changed how companies build and run their apps. Platforms like AWS, Azure, and Google Cloud let teams quickly set up servers, store data, and run apps without needing physical hardware.
+
+As a DevOps engineer, you should understand cloud services like virtual machines, storage, and serverless functions. You’ll also need to learn about cloud-native features like auto-healing (self-fixing systems), scaling apps up or down, and working with multiple cloud providers.
+
+Getting hands-on practice and even earning cloud certifications can help boost your skills and career.
+
+Focus on:
+
+Trying services like EC2 (virtual machines) and S3 (storage)
+Learning how apps scale and fix themselves
+Practicing on AWS, Azure, or Google Cloud
+Tip: Sign up for free-tier accounts on AWS or GCP and try creating a VM.
+
+Who Can Learn DevOps?
+This Learning Path is ideal for:
+
+Beginners new to IT, cloud, or development
+Students or recent graduates
+Developers moving into operations
+QA engineers looking to automate
+System admins aiming to modernize skills
+And no you don’t need a computer science degree or prior coding experience. Anyone can start learning DevOps who learn by seeing, enjoy practicing, or are excited to start learning something new.
