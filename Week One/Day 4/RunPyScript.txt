@@ -1,0 +1,58 @@
+How to Run a Python Script on Ubuntu
+
+comments
+Prev
+Next
+Here is a step-by-step guide to run a Python script:
+
+Step 1: Check if Python is installed or not
+Ubuntu usually comes with Python pre-installed. To check the version:
+
+
+python3 --version
+If Python 3 is already installed on your machine, the command will return your machine. In case it is not installed, you can run the following command and get the Python 3 installation:
+
+
+sudo apt install python-3 pip
+After executing this command it will automatically installed all packages.
+
+python install
+python install
+Step 2 Write your Python Script
+The next step is to write the python code you want to execute. To create a new script , navigate to your directory of choice:
+
+
+cd Python Script
+Inside the directory you need to create a new file . In the terminal execute the following command.
+
+
+nano myscript.py
+This will open blank text editor . write your logic here. After writing your code save the file using Ctrl + O and then exit your file using Ctrl +X.
+
+
+print('This is our Python Script');
+print('We are Running Hello World');
+Step 3: Run the Python Script
+
+To run the python Script use the command python3 filename
+
+scriptoutput
+scriptoutput
+
+Step 4 Make the Script Executable using shebang
+
+#!/bin/usr/env python3
+print(''This is our Python Script');
+print('We are running Hello World');
+Then make it executable:
+
+
+chmod +x myscript.py
+
+Now You can run it directly
+
+
+./myscript.py
+Conclusion
+Python powers over 70% of DevOps automation tasks due to its simplicity, flexibility, and rich ecosystem. From scripting CI/CD pipelines to managing cloud infrastructure, it streamlines workflows across environments. With libraries like Boto3, Ansible, and Fabric, Python remains a top choice for scalable and efficient DevOps automation.To run the python script on Ubuntu Machine is a striaghtforward process. By understanding how to run Python scripts, you can begin exploring the powerful tools Python offers, including those essential for AI development.
+
