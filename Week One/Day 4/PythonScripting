@@ -1,0 +1,214 @@
+Scripts are written in languages like Bash, Python, PowerShell, or Ruby and can be reused across environments. Rather than typing commands one by one, DevOps engineers use scripts to run them all together.
+
+Python is widely adopted in DevOps for several compelling reasons:
+
+Easy to Learn and Use: Great for scripting, even for those with limited coding experience.
+Powerful Libraries: Rich modules like os, subprocess, paramiko, boto3, requests, and fabric help manage infrastructure, cloud resources, and services.
+Automation First: Ideal for writing scripts that automate testing, deployment, monitoring, and CI/CD.
+Cross-Platform: Works across Windows, Linux, and macOS.
+ Note: A Python script can be written in a text file and run by the computer to perform a sequence of steps without user input.
+
+Example of Python Scripting
+
+import os
+
+# Create a new folder
+os.mkdir("my_new_folder")
+print("Folder created!")
+Common DevOps Use Cases for Python
+Python Plays an Important Role in DevOps. There are Several Key areas where Python Scripting Play a major role in DevOps:
+
+1. Automating Server Provisioning - Python can Interact with cloud like (AWS, Azure, GCP) to spin up virtual machines, set configurations, and manage cloud resources.
+
+Example Provisioning an EC2 instance using boto3(AWS sdk for Python):
+
+import boto3
+
+ec2 = boto3.resource('ec2')
+
+instance = ec2.create_instances(
+    ImageId='ami-0abcdef1234567890',
+    MinCount=1,
+    MaxCount=1,
+    InstanceType='t2.micro'
+)
+
+print("EC2 instance created:", instance[0].id)
+
+2. Configuration Management—Tools like Ansible, Chef and Puppet are often backend by Python, and custom Python Scripts can modify configuration files, environment variables, or install packages.
+
+Example: Install a package using Python and Sub Process
+import subprocess
+subprocess.run(['sudo', 'apt-get', 'install', '-y', 'nginx'])
+
+
+3. Monitoring and Log Parsing—Python helps parse logs , track system performance , and trigger alerts if issues are found .
+
+Example : Monitoring Disk Usage
+
+
+
+
+import shutil
+
+total, used, free = shutil.disk_usage("/")
+
+print(f"Disk Used: {used // (2**30)} GB")
+if free < 10 * (2**30):  # Less than 10GB free
+    print("Warning: Low disk space!")
+4. CI/CD Pipelines and Automation Scripts- Python Scripts can be integrated into jenkins pipelines, Github Actions, or Gitlab CI to automate testing, deployment , and rollback.
+
+Example : Auto Deploy on Commit
+
+
+
+
+import os
+​
+os.system("git pull origin main")
+os.system("docker-compose down && docker-compose up -d")
+print("Deployment complete!")
+5. Remote Server Management- Python combined with libraries like paramiko or fabric, can connect to remote machines over SSH to execute commands.
+
+Example: Remote restart using paramiko
+
+
+import os
+
+os.system("git pull origin main")
+os.system("docker-compose down && docker-compose up -d")
+print("Deployment complete!")
+Popular Python Libraries for DevOps
+In the world of DevOps, automation, monitoring, deployment, and integration are key. Python, being a versatile and powerful scripting language, offers a rich ecosystem of libraries that simplify these tasks. These libraries help DevOps professionals automate infrastructure, manage configurations, interact with cloud platforms, and monitor system performance—saving both time and effort.
+
+Whether you're provisioning servers, managing CI/CD pipelines, or building custom automation scripts, Python libraries like Paramiko, Boto3, Fabric, and Ansible make these tasks faster, more efficient, and highly customizable. Leveraging these libraries is a must for any DevOps engineer aiming to streamline operations and ensure scalable, reliable systems.
+
+Here is the table for Popular Python Libraries for DevOps
+
+Library
+
+Use Case
+
+boto3
+
+AWS automation and cloud Provisioning
+
+paramiko
+
+Remote SSH execution
+
+fabric
+
+Simplified Remote Development
+
+requests
+
+RESTAPI Calls and Webhooks
+
+subprocess
+
+Execute shell commands
+
+psutil
+
+Monitor system processes and usage
+
+Benefits of Python in DevOps
+Repeatable Automation- Write once , run anytime.
+Integration Friendly- It works with tools like Jenkins, Docker and Terraform
+Collaborative - Clean Code is Easy to review and Share
+Scalable- Scripts can Grow from script utilities to full automation tools.
+Beginner Scripting Tasks in DevOps
+Start with Basic Shell Scripts
+
+If you are a beginner, it's best to start with simple shell scripts using Bash (Linux) or PowerShell (windows) to automate basic tasks.
+
+Example: A simple Bash script to update a web app
+
+
+
+
+#!/bin/bash
+​
+echo "Updating web app..."
+cd /var/www/myapp
+git pull
+systemctl restart myapp
+echo "Update complete!"
+
+
+How to Write your First Bash Script:
+Open any Text editor and save the file as myscript.sh
+At the top, add #!/bin/bash to specify the shell.
+Add your commands below.
+Run chmod +x myscript.sh to make it executable.
+Then execute it with ./myscript.sh
+Intermediate Scripting in DevOps
+Automating CI/CD Pipelines
+At this stage, you can write scripts to help with Continuous Integration/ Continuous Deployment (CI/CD) processes like building and deploying applications.
+
+Example: Bash script to compress project files and upload to storage:
+
+
+#!/bin/bash
+
+tar -czf app-release.tar.gz /home/user/myapp
+scp app-release.tar.gz user@storage-server:/backups/
+echo "App packaged and uploaded!"
+Python for Server Automation
+Python is a flexible scripting language used for tasks like server setup and configurations.
+
+Example: Python script to check disk space on remote servers:
+
+
+import os
+
+def check_disk():
+    usage = os.popen("df -h /").read()
+    print("Disk Usage:\n", usage)
+
+check_disk()
+
+
+Advanced Scripting in DevOps
+Infrastructure as Code (IaC)
+At the advanced level, you’ll manage entire environments with code using tools like Terraform or Ansible.
+
+Example: A simple Terraform configuration to create a virtual machine:
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-12345abcd"
+  instance_type = "t2.small"
+}
+Automating Complex Workflows
+Advanced scripts can help with scaling apps, handling cloud deployments, or sending alerts when something fails.
+
+Monitoring with Python
+You can even use scripts to monitor system health and performance.
+
+Example: Python script that simulates server load logging:
+
+
+import time
+import random
+
+def log_cpu_usage():
+    while True:
+        cpu = random.uniform(10, 90)
+        print(f"Current CPU Usage: {cpu:.2f}%")
+        time.sleep(1)  # Added to avoid infinite fast loop
+
+log_cpu_usage()
+Best Practices for DevOps Python Scripting
+Keep it Simple and Reusable: Break your scripts into small parts that you can reuse later.
+Use Git: Save and Track changes to your scripts using Git.
+Add Comments: Write short notes in your scripts to explain what each part does.
+Handle Errors: Make sure your script shows a message or stops if something goes wrong.
+Keep Secrets Safe: Don’t put passwords or keys directly in your script. Use environment variables or a secure storage tool.
+
+
+
