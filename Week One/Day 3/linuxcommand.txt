@@ -1,0 +1,105 @@
+Basic Commands
+1. pwd
+The 'pwd' command helps you identify your current location in the file system
+2. ls
+The 'ls' command is used to list the files and directories in the current directory
+3. uname
+The 'uname' command retrieves system information
+4. cd
+The 'cd' command allows you to navigate the file system by changing your current directory.
+5. clear
+The 'clear' command clears the terminal screen, providing a clean workspace.
+6. whoami
+'whoami' returns the username of the current user logged into the terminal.
+7. History
+'History' This command is used to display the history of the command that previously executed. history
+8. free
+'free' This command is used to check the memory-related detail in your system.
+9. nslookup
+'nslookup' is used to obtain information for DNS server. It stands for Name Server Lookup.
+10. ssh-keygen
+'ssh-keygen' is used to establish a secure SSH connection from your host machine to any remote server. It generates a public/private key pair.
+11. curl
+'curl' is a tool which is used to fetch data and post the data over the internet. it can used various of protocol like HTTPS , SMTP and FTP.
+12 . curl -o
+'curl -o' flag saves the data into a file on the local machine.
+13. apt-get
+apt-get command used to manage packages in the linux. APT stand for the Advanced Packaging Tool , and its main used of install , update , upgrade and remove the packages.
+14. du
+'du' command is used to check disk usage space.
+15. df
+'df' command is used to check the available disk space in system.
+15. ifconfig
+ifconfig command is used to view the information about your network interface
+16. ip
+ip command is a modern replacement of ifconfig command. It is used to view and manage network settings. You can check Ip addresses, configure network interfaces, view routing tables by this command.
+
+ip [OPTIONS] OBJECT {COMMAND | help}
+
+
+Creating Files and Directories
+In DevOps, creating and managing files and directories is a common task. Here are some essential commands :
+
+For Creating Directories
+1 . For creating a single directory:
+
+ mkdir GFG                
+
+2. For creating multiple directories:
+
+ mkdir GFG1 GFG2 GFG3     
+
+
+3. For creating directory paths (directories inside directories):
+
+mkdir -p   /GFG/GFG1/GFG2
+
+4. For creating a series of numbered directories:
+
+ mkdir gfg{1..3}    
+
+Copying and Pasting Files and Directories
+The cp command is used for copying and pasting files or directories in Linux. Here are some commonly used options and examples:
+
+1 . For copying a file with verbosity and force (overwrite if necessary):
+
+cp -rvf  gfg1   gfg
+Removing Files and Directories
+To delete files or directories in DevOps, you can use the rm command. Be cautious, as it permanently removes data. Here's an example:
+
+For removing a directory and its contents:
+
+rm -rvf  gfg
+
+Renaming Files and Directories
+The mv command is used to rename files or directories. For example, to rename a directory from "gfg" to "gfg-devops," you can use:
+
+mv gfg  gfg-devops 
+
+
+User Management
+User management in Linux is a crucial aspect of DevOps and system administration. Managing users and their permissions ensures that your systems are secure, organized, and meet the needs of your organization. Here's an overview of user management in Linux within a DevOps context:
+
+1 . Creating a User
+To create a new user in Linux, you can use the useradd command. For example:
+
+sudo useradd  [usernam]
+
+2. Setting a Password
+After creating a user, set a password using the passwd command:
+
+ sudo passwd [username]
+
+3. Deleting a User
+To delete a user, use the userdel command :
+
+sudo userdel  [username]
+
+4. Switch to Another User
+The su command allows you to switch to another user's account by providing the username as an argument. To exit from the user's account and return to your original session, you can simply type 'exit'.
+
+su  [USER NAME]
+5. Rename the User
+To change the username from the current name (oldname) to the new name (newname), use the following command.
+
+sudo usermod -l [newname] [oldname]
