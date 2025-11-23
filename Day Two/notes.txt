@@ -1,0 +1,98 @@
+Collaboration and version control are important for software development. GitHub has become an important platform for developers, enabling seamless teamwork and efficient project management.
+
+GitHub is a web-based platform that uses Git, a version control system, to help developers manage and track changes in their code.
+It allows multiple people to collaborate on a project, track revisions, and contribute to code from anywhere in the world.
+GitHub offers both free and paid plans, catering to individuals and large organizations alike.
+Key Features of GitHub
+The below are key features of GitHub:
+
+1. Version Control
+GitHub's core functionality is based on Git, which allows you to keep track of changes in your code over time. This means you can always revert to a previous version if something goes wrong, compare different versions, and understand the history of your project.
+
+2. Repositories
+A repository (or repo) is a central place where all the files for a project are stored. Each repository can hold multiple files and folders, and it tracks the history of every change made. Repositories can be public (accessible to everyone) or private (restricted access).
+
+3. Branches
+Branches are a crucial feature in GitHub that enable parallel development. You can create a branch to work on a new feature or fix a bug without affecting the main codebase. Once your changes are ready, you can merge the branch back into the main branch.
+
+4. Pull Requests
+Pull requests are a way to propose changes to a repository. When you submit a pull request, you're asking the project maintainers to review and merge your changes into the main codebase. This feature promotes collaboration and ensures code quality through peer review.
+
+5. Issues and Project Management
+GitHub provides tools to track bugs, enhancements, and other tasks through the Issues feature. You can create issues, assign them to team members, and track their progress. GitHub also offers project boards for more advanced project management.
+
+6. Actions and Automation
+GitHub Actions allow you to automate workflows, such as running tests or deploying code, directly from your repository. This feature enhances productivity and ensures consistency across development processes.
+
+Getting Started with GitHub
+Step 1: Creating a GitHub Account
+Go to github.com and enter the required user credentials asked on the site and then click on the SignUp for GitHub button.
+
+Step 2: Creating a Repository
+To create a new repository on GitHub, follow these steps:
+
+1. Go to GitHub and log in.
+2. Click the "+" icon in the upper right corner and select "New repository."
+3. Enter a repository name and description.
+4. Choose whether the repository will be public or private.
+5. Click "Create repository."
+
+
+Upload Existing Repository to GitHub 
+: The system should have git installed in it if not install git. Make sure to choose Run git from Windows Command prompt option during installation. Otherwise, open git bash in place of step 2.
+: Open Terminal (for Mac users) or the command prompt (for Windows and Linux users).
+: Change the current working directory to your local project
+: Initialize the local directory as a git repository in different ways as described in the image.
+
+
+git init 
+A new .git folder is created in the directory which is by default hidden.
+Add the files in your new local repository. This stages them for the first commit.
+git add .
+# Adds the files in the local repository and stages them for commit. To unstage a file, use 
+git reset HEAD YOUR_FILE 
+Commit the files that you've staged in your local repository.
+
+git commit -m 'First commit'
+# Commits the tracked changes and prepares them to be pushed to a remote repository. 
+  To remove this commit and modify the file, use
+git reset --soft HEAD~1
+  And commit and add the file again.     
+At the top of the GitHub repository's Quick Setup page, click on the icon shown and copy the remote repository URL. 
+
+
+In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
+
+git remote add origin remote repository URL
+ # Connects to the remote repository 
+git remote -v
+ # Verifies the new remote URL 
+Push the changes in your local repository to GitHub.
+
+git push origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin.    
+And here you go...  
+
+You may download changes from remote repository to local repository using the command:
+
+git pull
+Git vs GitHub
+The below table helps you to understand the difference between Git and Github:
+
+
+                      Git                                                                                    GitHub
+ 
+Git is an distributed version control system (DVCS).                                        GitHub is an web-based platform which helps git to host its repositories.
+
+Git will track the changes in the projects that are made by the developers.                 GitHub will helps you to track the issue, pull request, code review and so on.
+
+Git works on command line(CLI).                                                             GitHub is an web-based graphical interface.
+
+Git works in the local machine of developers by which you can commit changes,               GitHub is a remote hosting service that allows other developers to pull and fetch the code according to their needs.
+create branches, merge code.
+
+
+Companies and Projects Using Git  
+The reputed and dream job companies of all the geeks like Microsoft, Google, Facebook, Twitter, LinkedIn, and Netflix make use of GIT.
+Open source projects like Ruby On Rails, jQuery, Perl, Debian, the Linux Kernel, and many more make use of git.
+
