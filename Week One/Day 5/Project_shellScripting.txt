@@ -30,3 +30,42 @@ You now know how to check CPU and memory usage in real time.
 You’ve worked with useful Python tools like psutil, smtplib, and logging.
 You’ve learned how to send automatic alerts before performance issues crash your server.
 
+Step 1: Enable Gmail App Password
+If you’re using a Gmail account:
+
+Go to https://myaccount.google.com/not-supported
+Select "Mail" + "Other" → Name it "Python Monitor"
+Copy the 16-character app password
+Replace this in the script: EMAIL_PASSWORD = "your_app_password"
+
+Step 2: Run the Script
+In your terminal, go to the folder where the script is saved, then run:
+python3 resource_monitor.py
+
+
+
+What happens:
+
+CPU and memory are checked
+If they cross the limit, an email is sent
+The result is also saved in a log file
+This repeats every 5 minutes
+Sample Email Alert
+Here is the sample email alert which
+
+1 How It Works
+Here are the working how the python script work
+
+The script checks CPU and memory usage by using the psutil library
+Than it captures the CPU usage as a percentage (e.g., 72%) and RAM usage as a percentage (e.g., 68%).
+If values go beyond your set limit, it sends an email
+Every time it checks the system, it compares current usage against these limits.
+It also logs every check in a log file like the script saves a line like this in server_monitor.log file
+This process repeats every 5 minutes
+
+2 Conclusion
+By building this Python-based Server Resource Monitoring and Email Alert System, you’ve taken the first real step toward automating DevOps tasks.
+
+You now know how to check CPU and memory usage in real time.
+You’ve worked with useful Python tools like psutil, smtplib, and logging.
+You’ve learned how to send automatic alerts before performance issues crash your server.
