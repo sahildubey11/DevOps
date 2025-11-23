@@ -1,0 +1,47 @@
+A Version Control System (VCS) is a tool used in software development and collaborative projects to track and manage changes to source code. It allows developers to:
+
+Record and track every update to the codebase
+Collaborate on code without overwriting each other's work
+Revert to earlier states of the project if needed
+Maintain a detailed and structured history of the project’s evolution
+If something breaks or doesn’t work, the team can compare versions, isolate the issue, and restore stable code without starting from scratch.
+
+Types of Version Control Systems
+There are three main types of Version Control Systems:
+
+1. Local Version Control Systems (Local VCS)
+A Local Version Control System operates entirely on your personal machine without any connection to a remote repository. All changes and version history are stored in a local database on your computer.
+
+In this setup, you are the only contributor, and there is no collaboration or sharing of changes with other users. Each developer maintains their own isolated repository.
+
+Key Characteristics
+No internet or server dependency.
+Useful for individual projects.
+Limited to single-user environments.
+2. Centralized Version Control Systems
+In a Centralized Version Control System, all the files and their version history are stored in a single central server. Developers connect to this server to access or modify files.
+
+The typical workflow is:
+
+Update/Checkout: The developer pulls the latest version of the files from the central server.
+Make Changes: The developer works on the files.
+Commit: The developer saves ("commits") their changes directly back to the central server, making them immediately available to everyone else.
+
+Pros & Cons:
+
+The benefit of CVCS (Centralized Version Control Systems) is that it makes collaboration among developers while providing insight into what everyone else is doing on the project.
+It allows administrators to have fine-grained control over who can do what. It has some downsides as well which led to the development of DVCS.
+The most obvious drawback is the single point of failure represented by the centralized repository. If the repository goes down, you would not be able to collaborate or save changes.
+3. Distributed Version Control Systems
+Distributed version control systems contain multiple repositories. Each user has their own repository and working copy. Just committing your changes will not give others access to your changes. This is because commit will reflect those changes in your local repository and you need to push them in order to make them visible on the central repository.
+
+Similarly, When you update, you do not get others changes unless you have first pulled those changes into your repository. 
+
+The key difference is the two-step process for sharing changes:
+
+Commit: You save your changes to your own local repository. At this point, the changes are only on your machine; no one else can see them.
+Push: You upload ("push") your committed changes from your local repository to the central repository (e.g., GitHub).
+To get changes from others, the process is:
+
+Fetch/Pull: You download ("pull") the latest changes from the central repository to your local repository.
+The most popular distributed version control systems are Git and Mercurial. They help us overcome the problem of single point of failure.  
