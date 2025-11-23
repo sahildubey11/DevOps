@@ -1,0 +1,37 @@
+Git is a distributed version control system (VCS) used to track changes in source code during software development.
+It helps developers collaborate, manage different versions of code, and roll back to previous states if needed.
+Collaboration: Multiple developers can work together and merge changes easily.
+History Tracking: Revert to previous versions whenever needed.
+Branching & Merging: Develop features separately and merge them safely.
+Distributed Development: Each developer has a full copy of the repo.
+Incremental Changes: Only differences are stored, saving space and simplifying updates.
+Core Concepts of Git
+Before using Git, it is important to understand some of its core concepts. These concepts will help you get started and make it easier to work with Git in real-world scenarios.
+
+1. Repositories
+A repository (or repo) is a storage space where your project files and their history are kept. There are two types of repositories in Git:
+
+Local Repository: A copy of the project on your local machine.
+Remote Repository: A version of the project hosted on a server, often on platforms like GitHub, GitLab, or Bitbucket.
+2. Commits
+A commit is a snapshot of your project at a specific point in time. Each commit has a unique identifier (hash) and includes a message describing the changes made.
+Commits allow you to track and review the history of your project.
+3. Branches
+Branches allow developers to work on separate tasks without affecting the main codebase. Common branch types include:
+
+Main (or Master) Branch: The stable version of the project, usually production-ready.
+Feature Branch: Used for developing new features or bug fixes.
+4. Merging
+Merging is the process of integrating changes from one branch into another. It allows you to combine the work done in different branches and resolve any conflicts that arise.
+5. Cloning
+Cloning a repository means creating a local copy of a remote repository. This copy includes all files, branches, and commit history.
+6. Pull and Push
+Pull: Fetches updates from the remote repository and integrates them into your local repository.
+Push: Sends your local changes to the remote repository, making them available to others.
+The Three States (The Staging Area)
+In Git, your files can be in one of three main states. Understanding this is key to understanding how Git works:
+
+Working Directory: This is your project folder with all the files you are currently working on. Any changes you make here are not yet tracked by Git.
+Staging Area (or Index): This is an intermediate area where you list the specific changes you want to include in your next "snapshot" or commit. You use the git add command to move changes from your working directory to the staging area.
+Repository (.git directory): This is where Git permanently stores the snapshots (commits) of your project. You use the git commit command to save the staged changes into the repository.
+This three-step process (modify -> add -> commit) gives you precise control over what gets saved in your project's history.
