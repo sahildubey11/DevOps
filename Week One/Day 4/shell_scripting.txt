@@ -1,0 +1,34 @@
+Using any modern operating system like Linux, macOS, or Windows involves interacting with a shell, which interprets and executes user commands. In Linux, this interaction typically happens through the terminal, where users type commands for the shell to process.
+
+Before learning shell scripting, you must understand:
+
+Kernel
+Shell
+Terminal
+Kernel
+The kernel is a computer program that is the core of a computer's operating system, with complete control over everything in the system. It manages the following resources of the Linux system:
+
+File management
+Process management
+I/O management
+Memory management
+Device management etc.
+
+Shell
+A shell is a special user program that provides an interface for the user to use operating system services
+Command Line Shell
+Shell can be accessed by users using a command line interface.
+Graphical Shells
+Graphical shells provide means for manipulating programs based on the graphical user interface (GUI)
+Terminal
+A program which is responsible for providing an interface to a user so that he/she can access the shell.
+
+Uses of Shell Scripts
+Here are the main reasons shell scripts are widely used in IT and DevOps:
+
+1. Automate Repetitive Tasks
+2. Reliable and Consistent
+3. Native Support on Unix/Linux Systems
+4. Great for Linking Commands to Work Together
+5. Ideal for IT, DevOps & Monitoring
+6. Lightweight and Easy to Write
