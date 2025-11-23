@@ -1,0 +1,32 @@
+How to See CPU Resource Usage Using Python Script
+This project is part of a basic DevOps course where we build practical tools using Python script. Here we’ll learn how to check CPU usage using Python,
+along with simple command-line tools you can use anytime because keeping an eye on your CPU usage is one of the easiest ways to check if
+your computer or server is working fine or overloaded.
+
+
+Prerequisites
+Python 3.x installed (you can check by running python3 --version)
+psutil library (used to monitor system health)
+smtplib (Python lib): To send email alerts via Gmail/SMTP
+Gmail/SMTP account: To send alerts to your inbox.
+Steps to see CPU Resource Usage Using Python Script
+This Python project helps you keep an eye on your server’s health and sends you an email alert when CPU or memory usage gets too high.
+
+
+
+How It Works
+Here are the working how the python script work
+
+The script checks CPU and memory usage by using the psutil library
+Than it captures the CPU usage as a percentage (e.g., 72%) and RAM usage as a percentage (e.g., 68%).
+If values go beyond your set limit, it sends an email
+Every time it checks the system, it compares current usage against these limits.
+It also logs every check in a log file like the script saves a line like this in server_monitor.log file
+This process repeats every 5 minutes
+Conclusion
+By building this Python-based Server Resource Monitoring and Email Alert System, you’ve taken the first real step toward automating DevOps tasks.
+
+You now know how to check CPU and memory usage in real time.
+You’ve worked with useful Python tools like psutil, smtplib, and logging.
+You’ve learned how to send automatic alerts before performance issues crash your server.
+
