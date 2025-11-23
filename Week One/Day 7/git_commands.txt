@@ -1,0 +1,91 @@
+Basic Git Commands
+Git commands are important for navigating and controlling your project repository. These commands help you manage files, track changes, and collaborate with others.
+
+           Command                                    	Description
+
+
+   git status	                                  Shows the current status of the repository — staged, unstaged, and untracked files.
+   git add <file-name>	                          Stages a specific file for commit. Use git add . to stage all changes.
+   git commit -m "message"	                      Commits the staged changes with a descriptive commit message.
+   git branch <branch-name>                     	Creates a new branch with the given name.
+   git checkout <branch-name>	                  Switches to the specified branch.
+   git merge <branch-name>	                      Merges changes from the given branch into the current branch.
+   git push origin <branch-name>	                Pushes the local branch changes to the remote repository.
+   git pull origin <branch-name>               	Fetches and merges changes from the remote repository into the local branch.
+   git log                                      	Displays the commit history for the current branch.
+
+
+
+
+Git workflows define how developers should use Git in a structured and efficient manner.
+
+1. Clone the Repository
+git clone git@github.com:username/repository.git
+
+2. Create and Switch to a New Branch
+git checkout -b feature-branch
+
+3. Make Changes and Stage Them
+git add <file-name>
+
+4. Commit the Changes
+git commit -m "Add new feature"
+
+5. Push the Changes
+git push origin feature-branch
+
+6. Create a Pull Request: After pushing your changes, create a pull request on GitHub to merge the feature branch into the main branch.
+
+7. Update your Local Repository
+git checkout main
+git pull origin main
+8. Delete Feature Branch:
+
+git branch -d feature-branch
+git push origin --delete feature-branch
+Git is a crucial tool for modern software development and DevOps. Mastering Git setting up repos, using branches,
+and managing code enables efficient collaboration and a streamlined, scalable workflow.
+
+
+
+
+
+
+Git Hosting
+Git Hosting stores your Git repositories on a remote server, enabling collaboration, backup, pull requests, CI/CD, and even website hosting, while Git manages changes locally.
+
+1. GitHub:
+GitHub is a cloud-based Git hosting platform owned by Microsoft, popular for open-source projects and beginner developers. It provides a complete environment for version control, collaboration, and deployment.
+
+Unlimited public and private repositories
+Pull requests and code reviews for team collaboration
+GitHub Pages for hosting static websites
+Automation and CI/CD with GitHub Actions
+2. GitLab:
+
+GitLab is a complete DevOps platform offering Git repository hosting along with built-in CI/CD, issue tracking, and project management tools. It is ideal for teams and enterprises looking to automate workflows and manage code efficiently.
+
+Public and private repositories
+Built-in CI/CD pipelines for automation
+Issue tracking and project management
+Option for self-hosting for full control and privacy.
+3. Bitbucket:
+
+Bitbucket is a Git hosting platform by Atlassian, designed for private repositories and team collaboration.
+It is ideal for small teams or companies seeking a secure environment with tight integration to project management tools.
+
+Private and public repositories
+Bitbucket Pipelines for CI/CD automation
+Integration with Jira and Trello
+Secure and collaborative environment for teams.
+
+
+
+
+
+
+
+
+
+
+
