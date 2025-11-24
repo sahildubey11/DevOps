@@ -1,6 +1,7 @@
 How to Add SSH Key to Your GitHub Account?
 
-An SSH (Secure Shell) key is a pair of cryptographic keys used for authenticating and securing network communications over the SSH protocol. SSH keys are commonly used to securely access remote systems, transfer files, and execute commands on remote machines without passwords.
+An SSH (Secure Shell) key is a pair of cryptographic keys used for authenticating and securing network communications over the SSH protocol.
+SSH keys are commonly used to securely access remote systems, transfer files, and execute commands on remote machines without passwords.
 
 Components of an SSH Key
 Private Key:
