@@ -1,0 +1,83 @@
+How to Add SSH Key to Your GitHub Account?
+
+An SSH (Secure Shell) key is a pair of cryptographic keys used for authenticating and securing network communications over the SSH protocol. SSH keys are commonly used to securely access remote systems, transfer files, and execute commands on remote machines without passwords.
+
+Components of an SSH Key
+Private Key:
+1. The private key is kept secret and stored securely on the user's local machine.
+2. It is used to decrypt encrypted messages with the corresponding public key.
+Public Key:
+1. The public key is meant to be shared with the remote systems you want to access.
+2. It encrypts messages that can only be decrypted with the corresponding private key.
+Now let's start by generating an SSH key to be used in our Github account:
+
+Step 1: Generate a New SSH Key
+If you don't already have an SSH key, you'll need to generate one. If you already have one, you can skip to Step 2.
+
+  a. Open a terminal on your computer.
+  b. Generate a new SSH key using the ssh-keygen command:
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+  c. If your system doesn't support the ed25519 algorithm, you can use rsa:
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+Replace "your_email@example.com" with your GitHub email address.
+
+Follow the prompts:
+
+When asked to "Enter a file in which to save the key," you can press Enter to accept the default location.
+When prompted, you can optionally enter a passphrase for added security.
+Note: It is asking for overwrite because i have already generated a ssh key earlier.
+
+Step 2: Start the SSH Agent
+  a. Start the SSH agent in the background:
+  Start-Service ssh-agent
+  b. Add your SSH private key to the SSH agent:
+  ssh-add ~/.ssh/id_ed25519
+  c. If you used the RSA algorithm, the command will be:
+  ssh-add ~/.ssh/id_rsa
+
+
+Started the ssh-agent and added the private key.
+
+Step 3: Add the SSH Key to Your GitHub Account
+  a. Copy the SSH public key to your clipboard:
+  cat ~/.ssh/id_ed25519.pub
+  If you used RSA:
+  cat ~/.ssh/id_rsa.pub
+  b. Select and copy the output starting with ssh-ed25519 or ssh-rsa.
+Log in to your GitHub account.
+
+Navigate to SSH and GPG keys settings:
+  1. Click on your profile picture in the top-right corner and select "Settings".
+  2. In the left sidebar, click on "SSH and GPG keys".
+
+
+Add a new SSH key:
+    1. Click on the "New SSH key" button.
+    2. In the "Title" field, add a descriptive label for the new key (e.g., "My Laptop").
+    3. In the "Key" field, paste the SSH key you copied in Step 3.1.
+    4. Click "Add SSH key".
+Confirm your GitHub password to complete the process.
+
+Successfully added ssh key:
+
+Step 4: Test Your SSH Connection
+  a. Open a terminal.
+  b. Test the connection to GitHub
+      ssh -T git@github.com
+You might see a warning the first time you connect:
+
+The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+RSA key fingerprint is SHA256:... 
+Are you sure you want to continue connecting (yes/no)?
+
+Type yes to continue.
+  1. Verify successful connection:
+
+If everything is set up correctly, you should see a message like:
+
+Hi username! You've successfully authenticated, but GitHub does not provide shell access
+You've successfully added an SSH key to your GitHub account.
+
+
+
