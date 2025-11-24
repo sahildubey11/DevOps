@@ -1,0 +1,67 @@
+Introduction to Git Branch
+
+A Git branch is like a separate workspace where you can work on a new changes without disturbing the main project. The primary code is usually stored in main or master branch. When you are done with your work on the branch, you can merge your changes back into the main project.
+
+Branches make it easy to:
+  1. Manage different tasks or features independently
+  2. Test changes without affecting live code
+  3. Collaborate with others efficiently
+How Git Branches Work?
+Git branches allow you to manage different tasks or features in isolation without affecting the main project. Here’s how it works:
+
+  1. Main Branch: This is the primary branch where the stable and production-ready code resides. It is the base version of the project that is always in a deployable state.
+  2. Creating a Feature Branch: When you want to work on a new feature or a bug fix, you create a new branch. This branch serves as a workspace for the new changes, and it doesn't affect the main branch.
+  3. Making Commits: As you develop, you make changes and record them as commits. Each commit captures a snapshot of your work, keeping a history of changes on your feature branch.
+  4. Merging: Once you are satisfied with your work in the feature branch, you merge it back into the main branch. This integrates your changes into the stable version of the project, making them part of the overall codebase
+
+Types of Branches in Git
+Git uses different types of branches to keep things organized and allow you to work on different tasks without disturbing the main project. Here are the most common types of branches you will work with:
+
+  1. Main (or Master) Branch: This is the main branch where the final stable code is stored. It should always be production-ready.
+  2. Feature Branch: This branch is created to work on a new feature. Once done, it is merged back into the main or develop branch.
+  3. Develop Branch: It is used to combine all new features before adding them to the main branch. It helps in testing and development.
+  4. Hotfix Branch: Created to quickly fix urgent issues in production. After fixing, it is merged back into the main branch.
+  5. Release Branch: Used to prepare for a new version release. Only final testing and small fixes are done here before merging into main.
+  6. Bugfix Branch: Created to fix specific bugs in the code. Once fixed, it is merged into the develop or main branch.
+
+Basic Git Branching Commands
+Below are some essential Git branching commands that everyone should learn when starting to work with Git branching:
+
+  1. git branch
+  Lists all local branches or creates a new branch when used with a name means it displays a list of all local branches or creates a new branch if a name is specified.
+
+  2. git branch <branch-name>
+  Creates a new branch with the specified name without switching to it, allowing you to stay on your current branch.
+  git branch <branch-name>
+
+  3. git checkout <branch-name>
+  Switches to an existing branch in the repository, allowing you to continue working from where it was last updated.
+
+  4. git checkout -b <branch-name>
+  Creates a new branch with the specified name and immediately switches to it, allowing you to start working on it right away.
+
+  5. git switch <branch-name>
+  A modern alternative to the checkout command, primarily used for switching branches more efficiently and intuitively.
+
+  6. git switch -c <branch-name> 
+  Creates a new branch with the specified name and switches to it immediately, allowing you to start making changes right away.
+
+  7. git rebase <branch-name>
+  Puts your changes on top of another branch like in the below example as you have rebased all the changes in the feature branch are merged at the end of the main branch.
+
+  Before rebase
+
+  main:    A --- B --- C
+                    \
+  feature:           D --- E
+  After rebase
+
+  main:    A --- B --- C
+                          \
+  feature:                 D' --- E'
+  
+  8. git branch -d <branch-name>
+  Deletes the specified branch, but only if it has been fully merged into its upstream branch, ensuring no unmerged changes are lost.
+
+  9. git branch -D <branch-name>
+  Forcefully deletes the specified branch, even if it contains unmerged changes or has not been fully updated, potentially leading to data loss.
