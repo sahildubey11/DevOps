@@ -1,0 +1,69 @@
+Git Stash
+When working on a Git project, there are times when you need to switch branches or pull updates, but you are in the middle of changes that are not ready to be committed. Committing half-done work can clutter your project history and discarding it would mean losing progress.
+
+This is where Git stash comes in. It temporarily saves your uncommitted changes so you can work on something else and come back to your work later without losing anything. In this article, we will understand how Git stash works, when to use it, and how to manage stashes effectively with common commands and practical examples.
+
+Characteristics of Git Stash
+  Here are the key characteristics of Git Stash:
+  
+  1. Temporarily Saves Changes: It stores changes both in the staging area and working directory.
+  2. Non-Disruptive: It does not affect your branch or repository history.
+  3. Stack-like Storage: Each stash is stored with an index (e.g., stash@{0}), so you can apply or drop them as needed.
+  4. Useful for Context Switching: It is ideal when you need to switch tasks or branches while preserving your progress.
+
+Essential Git Stash Commands
+Here are the basic and advanced commands we can use with Git stash:
+
+1. Stashing Changes
+To stash our current changes, use:
+
+git stash
+This saves modifications in tracked files and clears the working directory. Untracked and ignored files are not included by default.
+
+Stashing with a Message: we can add a description to our stash, which is useful if we have multiple stashes:
+
+git stash push -m "Work in progress on feature X"
+Stashing Including Untracked Files: To include untracked files in our stash, use the -u (or --include-untracked) option:
+
+git stash -u
+2. Listing Stashes
+  To see all stashes saved in our repository, use
+
+  git stash list
+
+3. Applying Stashes
+  To apply the most recent stash, use:
+  git stash apply
+  Apply a specific stash
+  git stash apply stash@{1}
+  Apply and remove the stash simultaneously
+  git stash pop
+
+This applies the latest stash and removes it from the list.
+
+4. Dropping a Stash
+  To delete a specific stash:
+  git stash drop stash@{0}
+To remove the most recent stash:
+  git stash drop
+5. Clearing All Stashes
+  To delete all stashes permanently:
+    git stash clear
+
+6. Creating a Branch from a Stash
+If we want to preserve stashed changes in a new branch:
+  git stash branch new-branch-name
+
+Common Use Cases for Git Stash
+The below are the common use cases of git stash:
+
+  1. Switching Branches: Stashing allows to save the uncommitted changes in local folder and lets we switch between the branches without loosing our work..
+  2. Pulling Latest Changes: Before pulling the latest changes from a remote repository, it’s often best to stash our local changes to avoid merge conflicts.
+  3. Temporary Task Switching: If we need to temporarily work on something else (like fixing a bug) without losing our current progress, we can stash our changes and restore them after the temporary task is complete.
+
+Best Practices for Using Git Stash
+  1. Use Descriptive Messages: Helps in identifying different stashes easily.
+  2. Regularly Clean Up Stashes: Apply or drop stashes to avoid unnecessary clutter.
+  3. Be Mindful of Conflicts: Applying a stash may lead to conflicts that need manual resolution.
+  4. Stash Untracked Files When Necessary: Use -u if we need to save untracked files.
+  5. Check our Work Before Stashing: Ensure we don’t stash incomplete or unnecessary changes.
