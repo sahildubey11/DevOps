@@ -24,3 +24,97 @@ What Happens During Rebase?
  2.  Then it adds the latest work from the branch you rebased onto.
  3.  Then it reapplies your changes on top of that.
  4.  It creates new commit versions of your changes (called C′ and D′).
+
+
+
+Types of Git Rebase
+    1. Interactive Rebase (git rebase -i)
+    This allows you to edit, squash, reorder or delete commits in your branch. It gives you full control over the commit history,
+    making it useful for cleaning up commit messages or combining multiple commits into one.
+    It combines commits to merge them into a single commit.
+    Git rebase reorders commits to reflect a more logical flow.
+    Editing commit messages before pushing them to a remote repository.
+    2. Non-Interactive Rebase (Standard Rebase)
+    This is the regular rebase command (git rebase <branch>), which simply applies your commits onto the target branch without allowing for manual intervention.
+    It is ideal for straightforward rebasing where you don’t need to modify or review individual commits.
+    Updating your feature branch with the latest changes from the main branch.
+    3. Auto-merge Rebase
+    When rebasing, Git will automatically merge changes if there are no conflicts between the commits being rebased and the target branch. If conflicts are detected, Git will stop and require manual resolution.
+    Rebasing feature branches frequently to stay up-to-date with the main branch.
+    Git Standard vs Git Interactive Rebase
+    Git rebase operates in two modes: Standard and Interactive. The mode is determined by whether the -i (interactive) flag is used. Without any arguments, Git runs rebase in Standard mode.
+
+Standard Rebase
+Standard rebasing applies all commits from the current branch to the head of the target branch without manual intervention. The following command performs a standard rebase:
+
+git rebase master branch_x
+This is equivalent to:
+git rebase master
+Here, Git automatically takes the commits from your current branch and applies them to the specified branch (master).
+Interactive Rebase
+Interactive rebasing allows you to edit, reorder, squash, or drop commits before applying them to the new branch. This gives you full control over the branch's commit history.
+
+git checkout branch_x
+git rebase -i master
+This command lists all commits that are about to be moved and prompts you to edit or rearrange them based on your choices. It helps maintain a clean and structured project history.
+Common Git Rebase Commands
+The following are the most used Git rebase commands:
+
+git rebase master: Applies the changes of the current branch onto the master branch.
+git rebase --continue: Continues the rebase process after resolving conflicts
+git rebase --abort: Cancels the ongoing rebase and restores the branch to its original state
+git rebase --skip: Skips a commit if conflicts arise, though this is not recommended as it could damage your codebase.
+git rebase -I HEAD~3: Starts an interactive rebase on the last three commits, allowing edits like commit message changes.
+Configuration Options In Git Rebase
+Customize your rebase process with options like:
+
+--interactive (-i): Enables interactive rebasing for editing commits.
+--onto <newbase>: Specifies a new base commit for rebase.
+--no-verify: Skips pre-commit hooks during rebase.
+--auto-squash: Automatically squashes commits marked with fixup or squash
+Git Rebase Abort
+If you wish to undo a rebase, use the git reset command:
+git reset --hard <branch-name>
+This resets your branch to its previous state before rebasing.
+Steps to Recover Lost Changes Process of Upstream Rebase
+Step 1: Check the Reflog
+
+Use the following command to view the commit history, including the lost commits:
+
+git reflog
+Step 2: Create a New Branch
+
+Once you find the commit ID, create a new branch from it:
+
+git branch <new-branch> <commit-id>
+Step 3: Cherry-pick Lost Commits
+
+The below command are used to apply the lost commits to your new branch:
+
+git cherry pick <commit id> 
+Step 4: Resolve Conflicts
+
+Use git add <file> to stage resolved files.
+
+git add <file>
+Step 5: Push the New Branch
+
+To push your new branch to the remote repository use the following command:
+
+git push -u origin <new-branch>
+Git Pull Rebase
+The git pull --rebase command fetches updates from the remote repository and re-applies your local commits on top of those changes, resulting in a linear commit history.
+
+Steps:
+
+Fetch the remote repository:
+git fetch <remote>
+Rebase the local branch:
+git pull --rebase
+Best Practices for Using Git Rebase
+The following are the best practices that you should follow while using git rebase:
+
+Don’t Rebase Public History: Don’t rebase branches that are already shared with others. Rebase changes the history, which can mess things up for your teammates.
+Use Rebase to Clean Up Commits: Before merging your feature branch into the master branch, use rebase to tidy up your commits, combining small ones into one clear commit.
+Rebase Regularly: Keep your feature branch up-to-date by regularly rebasing it on the latest master or main branch. This helps avoid conflicts later.
+Resolve Conflicts Quickly: If conflicts happen while rebasing, fix them as soon as possible. Don’t let them pile up.
