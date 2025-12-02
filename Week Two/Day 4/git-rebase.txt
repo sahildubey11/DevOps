@@ -1,0 +1,26 @@
+Git Rebase is a Git command used to integrate changes from one branch into another by moving your commits to the latest point (tip) of the target branch.
+Unlike Git merge, which creates a new merge commit and retains the commit history as a branching tree,
+rebase rewrites your commit history to make it look like your work started from the most recent updates on the target branch.
+
+Syntax:
+  git checkout <feature-branch>
+  git rebase <base-branch>
+In this syntax:
+
+  <feature-branch> is the branch with the changes you want to rebase.
+  <base-branch> is the branch you want to rebase your changes onto, typically main or master.
+
+When to Use Git Rebase
+  Imagine you are working on a feature (like “adding a login button”) while your teammate adds something else (like “fixing a bug”) to the main project.
+  Later, you want to update your work so it includes all the latest changes from the main project before you finish.
+
+Think of it like this:
+  1. You are writing a paragraph for a report.
+  2. While you are writing, someone else updates the report with new lines.
+  3. git rebase lets you move your paragraph to the end of the latest version of the report, so it looks like you wrote it after those new lines.
+
+What Happens During Rebase?
+ 1.  Git temporarily removes your changes.
+ 2.  Then it adds the latest work from the branch you rebased onto.
+ 3.  Then it reapplies your changes on top of that.
+ 4.  It creates new commit versions of your changes (called C′ and D′).
