@@ -1,0 +1,58 @@
+Git - Merge
+
+Git Merge is a command used to combine the changes from two branches into one.
+It integrates work from different branches into a single unified history without losing progress.
+For example, you can merge a feature branch into the main branch to include all recent updates.
+
+    Preserves the complete commit history of both branches.
+    Performs automatic merges unless conflicts require manual resolution.
+    Uses fast-forward merge when no diverging commits exist.
+    Creates a merge commit to combine branch histories when necessary.
+    Does not delete branches after merging.
+    Commonly used to integrate feature branches into the main branch.
+
+Types of Merging in Git
+Git supports several types of merging. The two most common types are:
+
+1. Fast-forward merging
+This occurs when the target branch (e.g., main) is directly ahead of the feature branch (e.g., dev).
+Instead of creating a merge commit, Git simply moves the current branch’s tip to the target branch’s tip.
+Fast-forward merging is only possible when branches haven't diverged
+
+2. Three-way merging
+This type occurs when the base branch has changed since the branch was first created.
+Git generates a new merge commit by comparing changes in both branches with the base branch.
+
+Steps to Perform Git Merge
+To ensure smooth merging, follow these steps:
+
+Step 1: Create a New Branch
+Create a new branch from the remote repository you want to merge.
+git branch <new-branch-name>
+
+Step 2: Pull the Latest Changes
+Before merging, ensure that you pull the latest changes from both branches (e.g., main and the feature branch).
+git checkout <target-branch>    
+git pull origin <target-branch>  
+
+git checkout <feature-branch>   
+git pull origin <feature-branch> 
+
+Step 3: Merge the Branch
+If any conflicts arise, Git will notify you. Resolve them manually before proceeding.
+
+git checkout <target-branch>   
+git merge <feature-branch>
+
+Step 4: Test the Merged Code
+Make sure the merged code functions correctly by testing it either automatically or manually.
+
+# Run tests or manually test your application
+Step 5: Commit the Merged Code
+Once satisfied with the merged code, commit the changes:
+
+git commit -m "Merge branch 'dev' into main"
+Step 6: Push the Merged Branch
+Push the changes to the remote repository to share the new merged branch:
+
+git push origin main
