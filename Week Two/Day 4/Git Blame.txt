@@ -1,0 +1,84 @@
+Git blame is a Git command used to track who last modified each line of a file, along with when and in which commit the change was made. It is mainly used for debugging, code review, and understanding code history at a line level.
+
+🔹 What information does git blame show?
+
+For each line in a file, it displays:
+
+Commit ID – the commit where the line was last changed
+
+Author name / email – who made the change
+
+Timestamp – when the change was made
+
+Line number and code content
+
+🔹 Basic Syntax
+git blame <file-name>
+
+🔹 How to Use Git Blame (Workflow)
+
+Initialize or clone a Git repository.
+
+Navigate to the repository directory.
+
+Run git blame on a file to see line-by-line history.
+
+Use the commit ID from the output to inspect detailed changes using:
+
+git log -p <commit-id>
+
+🔹 Important Git Blame Options
+
+View raw timestamp
+
+git blame -t <file-name>
+
+
+View a specific range of lines
+
+git blame -L start,end <file-name>
+
+
+Show author email instead of name
+
+git blame -e <file-name>
+
+
+View changes not older than a specific time
+
+git blame --since=3.months <file-name>
+
+
+Filter out older commits
+
+git blame --since=3.months <file-name> | grep -v '^\^'
+
+🔹 Understanding the Output
+
+Each line is annotated with its last modifying commit.
+
+Commits starting with ^ indicate changes older than the given time range.
+
+Helps identify who to contact for a particular piece of code.
+
+🔹 GUI Alternative
+
+Git hosting platforms like GitHub, GitLab, and Bitbucket provide a Blame view in the UI, which visually shows:
+
+Author
+
+Commit
+
+Timestamp
+
+Line-by-line modification history
+
+🔹 Why Git Blame is Important (DevOps View)
+
+Helps debug issues quickly
+
+Improves accountability
+
+Useful in large teams and CI/CD workflows
+
+Works well with other Git commands for deep analysis
