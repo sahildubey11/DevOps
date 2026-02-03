@@ -1,0 +1,119 @@
+🔹 What is a Git Conflict?
+
+A Git conflict happens when Git can’t automatically merge changes because:
+
+The same file
+
+The same line(s)
+
+Were modified differently in two branches
+
+👉 Git gets confused and asks YOU to decide.
+
+🔹 When Do Git Conflicts Occur?
+
+Common situations:
+
+Merging branches
+
+git merge feature-branch
+
+
+Pulling changes
+
+git pull origin main
+
+
+Rebasing
+
+git rebase main
+
+🔹 Simple Example of a Conflict
+Situation:
+
+Branch main edits line 5
+
+Branch feature also edits line 5
+
+Git cannot choose → ❌ Conflict
+
+🔹 How Git Shows a Conflict (Very Important)
+
+Inside the file 👇
+
+<<<<<<< HEAD
+This is code from main branch
+=======
+This is code from feature branch
+>>>>>>> feature
+
+Meaning:
+
+<<<<<<< HEAD → current branch code
+
+======= → separator
+
+>>>>>>> feature → incoming branch code
+
+🔹 Steps to Resolve a Git Conflict
+✅ Step 1: Open the conflicted file
+
+Git will tell:
+
+CONFLICT (content): Merge conflict in file.txt
+
+✅ Step 2: Decide what to keep
+
+Options:
+
+Keep HEAD code
+
+Keep incoming code
+
+Combine both
+
+Rewrite clean version
+
+✂️ Remove conflict markers after editing.
+
+✅ Step 3: Mark as resolved
+git add file.txt
+
+✅ Step 4: Complete merge
+git commit
+
+
+🎉 Conflict resolved!
+
+🔹 Git Conflict Resolution Using Commands
+Command	Use
+git status	See conflicted files
+git diff	View differences
+git add <file>	Mark resolved
+git commit	Finish merge
+🔹 Abort a Conflict (If You Panic 😅)
+Abort merge:
+git merge --abort
+
+Abort rebase:
+git rebase --abort
+
+🔹 Best Practices to Avoid Conflicts
+
+✔ Pull frequently
+
+git pull origin main
+
+
+✔ Keep commits small
+✔ Communicate with team
+✔ Avoid editing same file/lines
+✔ Use feature branches
+
+🔹 Conflict in CI/CD (DevOps Point 📌)
+
+Conflicts break pipelines
+
+Code won’t build if merge fails
+
+Teams resolve conflicts before deployment
