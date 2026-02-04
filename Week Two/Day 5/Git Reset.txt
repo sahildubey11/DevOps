@@ -1,0 +1,98 @@
+Git reset is used to move your project back to an earlier state by manipulating three Git levels:
+
+HEAD → points to the latest commit
+
+Index (Staging Area) → files ready to commit
+
+Working Directory → actual local files
+
+👉 What Git Reset is used for
+
+Unstage files added by mistake
+
+Undo commits
+
+Discard local changes
+
+Clean up commit history (mainly for local branches)
+
+🔹 Git Reset Modes
+
+Soft Reset (--soft)
+
+Moves HEAD only
+
+Changes stay staged
+
+Working directory unchanged
+✔ Use when you want to redo a commit message or combine commits
+
+Mixed Reset (--mixed) (default)
+
+Moves HEAD + clears staging area
+
+Changes stay in working directory
+✔ Best for unstaging files
+
+Hard Reset (--hard)
+
+Moves HEAD + index + working directory
+
+All changes lost ❌
+✔ Use carefully (irreversible)
+
+🔹 Common Commands
+
+git reset → unstage files
+
+git reset --soft <commit> → undo commit, keep changes staged
+
+git reset --hard <commit> → delete all changes and commits
+
+⚠️ Not safe for shared branches because it rewrites history.
+
+🔹 Git Revert — Summary
+
+Git revert is the safe way to undo a commit.
+
+👉 How Git Revert works
+
+Does NOT delete the original commit
+
+Creates a new commit that reverses the changes
+
+Keeps commit history intact
+
+✔ Best for shared/collaborative branches
+
+🔹 Steps to Revert a Commit
+
+Find commit hash → git log
+
+Revert commit → git revert <commit-hash>
+
+Resolve conflicts (if any)
+
+Edit commit message (optional)
+
+Push changes → git push
+
+🔹 Useful Revert Options
+
+--no-commit → apply revert without committing
+
+-m 1 → revert a merge commit
+
+--no-edit → keep default commit message
+
+🔹 Git Reset vs Git Revert (Quick Comparison)
+Git Revert	Git Reset
+Creates new undo commit	Moves HEAD backward
+History preserved	History rewritten
+Safe for shared branches	Not safe for shared branches
+Undo specific commit safely	Remove commits/unstage files
+🔹 Git Reset vs Git Revert vs Git Checkout
+Command	Purpose
+git reset	Undo commits, unstage files, can change history
+git revert	Safely undo a commit by creating a new one
+git checkout	Switch branches or restore files
