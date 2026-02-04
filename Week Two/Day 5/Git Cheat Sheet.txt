@@ -1,0 +1,137 @@
+A Git Cheat Sheet is a quick-reference guide that covers all essential Git commands used in development and DevOps workflows. It helps developers manage version control, collaboration, branching, history, and deployment efficiently.
+
+🔹 1. Git Installation & Version Check
+
+Git can be installed on Windows, macOS, and Linux using platform-specific package managers.
+After installation, git --version is used to verify Git is correctly installed.
+
+🔹 2. Git Configuration & Setup
+
+Before using Git, user identity is configured:
+
+Username & email identify commit authorship
+
+Color UI improves readability
+
+Aliases shorten long commands
+
+Configuration can be viewed or retrieved using config list/get commands
+
+✔ This setup ensures commits are properly tracked and readable.
+
+🔹 3. Initializing a Repository
+
+Git repositories can be:
+
+Created locally using git init
+
+Cloned from remote using git clone
+
+A specific branch can also be cloned directly
+
+✔ This is the starting point of version control.
+
+🔹 4. Basic Git Workflow Commands
+
+Core daily-use commands include:
+
+git add → stage files
+
+git status → check repo state
+
+git diff → compare changes
+
+git commit → save a snapshot
+
+git restore / reset → undo changes
+
+git rm / mv → remove or rename files
+
+✔ These commands manage the full edit → stage → commit lifecycle.
+
+🔹 5. Commit Message Standards (Conventional Commits)
+
+Modern Git practices use structured commit messages like:
+
+feat: new feature
+
+fix: bug fix
+
+docs: documentation
+
+refactor: code improvement
+
+test:, style:, perf:, ci: etc.
+
+✔ Helps in clean history, automation, and CI/CD pipelines.
+
+🔹 6. Branching & Merging
+
+Git supports parallel development using branches:
+
+Create, list, delete branches
+
+Switch or create branches
+
+Merge branches together
+
+View commit history across branches
+
+Temporarily save work using stash
+
+Mark releases using tags
+
+✔ Enables team collaboration without conflicts.
+
+🔹 7. Remote Repository Operations
+
+Remote commands allow collaboration:
+
+fetch → download updates
+
+pull → fetch + merge
+
+push → upload commits
+
+remote add/remove/rename → manage connections
+
+✔ Keeps local and remote repositories in sync.
+
+🔹 8. Comparing & Reviewing Code
+
+Git provides powerful review tools:
+
+git show → inspect commits
+
+git diff → compare changes
+
+git blame → find who changed what
+
+git log → track full history with filters
+
+✔ Essential for debugging and code reviews.
+
+🔹 9. Managing History Safely
+
+Git history can be managed using:
+
+git revert → safe undo (new commit)
+
+git rebase → clean linear history
+
+git reset → move HEAD (local use)
+
+✔ Helps maintain a clean and meaningful commit timeline.
+
+🔹 10. Git Reflog (Recovery Tool)
+
+git reflog tracks all HEAD movements, even deleted commits.
+It allows:
+
+Recovering lost commits
+
+Undoing hard resets
+
+Restoring previous states
+
+✔ Acts as a safety net in Git.
